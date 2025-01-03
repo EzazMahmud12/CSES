@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'
+#define test_case int t;cin>>t;while(t--)
+ 
+// const int mx=2e5+123;
+// long long a[mx];
+// long long dp[mx];
+// const int Inf=2e9;
+ 
+ 
+ 
+ 
+int main(){
+		optimize()
+ 
+		long long int n,i,c,ans=0;
+ 
+		cin>>n;
+		vector<int> v(n);
+ 
+		for(i=0; i<v.size(); i++){
+			cin>>v[i];
+		}
+		
+		for(i=0; i<v.size()-1; i++){
+			if(v[i]>v[i+1]){
+				c=v[i]-v[i+1];
+				ans+=c;
+				v[i+1]+=c;
+			}
+		}
+	
+		cout<<ans;
+ 
+ }
