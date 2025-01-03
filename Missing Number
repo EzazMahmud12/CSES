@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'
+#define test_case int t;cin>>t;while(t--)
+ 
+// const int mx=2e5+123;
+// long long a[mx];
+// long long dp[mx];
+// const int Inf=2e9;
+ 
+ 
+ 
+ 
+int main(){
+		optimize()
+ 
+		long long n,i,a,sum=0,sum2;
+ 
+		cin>>n;
+ 
+		for(i=0; i<n-1; i++){
+			cin>>a;
+			sum+=a;
+		}
+ 
+		sum2=(n*(n+1))/2;
+ 
+		cout<<sum2-sum;
+		
+		
+ 
+ }
