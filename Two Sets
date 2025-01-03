@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'
+#define test_case int t;cin>>t;while(t--)
+ 
+ //const int mx=2e5+123;
+// long long a[mx];
+// long long dp[mx];
+// const int Inf=2e9;
+ 
+ 
+ 
+ 
+ 
+int main(){
+		optimize()
+ 
+		long long int i,n,sum,need;
+ 
+		cin>>n;
+ 
+		vector<int> v;
+		vector<int> v1;
+		vector<int> v2;
+ 
+		for(i=1; i<=n; i++){
+			v.push_back(i);
+		}
+ 
+		sort(v.rbegin(),v.rend());
+ 
+		sum=(n*(n+1))/2;
+ 
+		if(sum%2!=0){
+			cout<<"NO";
+			return 0;
+		}
+		cout<<"YES"<<endl;
+		need=sum/2;
+		
+		for(i=0; i<v.size(); i++){
+			if(need>=v[i]){
+				need-=v[i];
+				v1.push_back(v[i]);
+			}
+			else v2.push_back(v[i]);
+		}
+	
+		cout<<v1.size()<<endl;
+		for(auto it:v1) cout<<it<<" ";
+		cout<<endl;
+		cout<<v2.size()<<endl;
+		for(auto it2:v2) cout<<it2<<" ";
+ 
+ }
